@@ -48,8 +48,8 @@ resource "vsphere_virtual_machine" "standalone" {
   resource_pool_id = "${data.vsphere_compute_cluster.cluster.resource_pool_id}"
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
 
-  num_cpus = "${var.vm_cpu}"
-  memory   = "${var.vm_ram}"
+  num_cpus = 2
+  memory   = 4096
   guest_id = "${data.vsphere_virtual_machine.template.guest_id}"
 
   network_interface {

@@ -68,14 +68,6 @@ variable "vm_domain" {
   description = "Domain for the vSphere virtual machine"
 }
 
-variable "vm_cpu" {
-  description = "Number of vCPU for the vSphere virtual machines"
-}
-
-variable "vm_ram" {
-  description = "Amount of RAM for the vSphere virtual machines (example: 2048)"
-}
-
 variable "vm_name" {
   description = "The name of the vSphere virtual machines and the hostname of the machine"
 }
