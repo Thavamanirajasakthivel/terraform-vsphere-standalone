@@ -69,11 +69,7 @@ resource "vsphere_virtual_machine" "standalone" {
     customize {
       timeout = "20"
 
-      linux_options {
-        host_name = "${var.vm_name}"
-        domain    = "${var.vm_domain}"
-      }
-
+      
       network_interface {
         ipv4_address = "${var.vm_ip}"
         ipv4_netmask = "${var.vm_netmask}"
