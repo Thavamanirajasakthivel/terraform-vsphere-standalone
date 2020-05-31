@@ -16,15 +16,17 @@ variable "vsphere_vcenter" {
 
 variable "vsphere_unverified_ssl" {
   description = "Is the vCenter using a self signed certificate (true/false)"
+  default = "false"
 }
 
 variable "vsphere_datacenter" {
   description = "vSphere datacenter"
+  default = "Datacenter1"
 }
 
 variable "vsphere_cluster" {
   description = "vSphere cluster"
-  default     = ""
+  default     = "Cluster1"
 }
 
 #=========================#
@@ -33,14 +35,17 @@ variable "vsphere_cluster" {
 
 variable "vm_datastore" {
   description = "Datastore used for the vSphere virtual machines"
+  default = "3PAR_A64G-10TB-C3-01"
 }
 
 variable "vm_network" {
   description = "Network used for the vSphere virtual machines"
+  default = "vxw-dvs-693-virtualwire-5-sid-5001-Green-Net"
 }
 
 variable "vm_template" {
   description = "Template used to create the vSphere virtual machines"
+  default = "eshopterraform"
 }
 
 variable "vm_linked_clone" {
@@ -50,18 +55,22 @@ variable "vm_linked_clone" {
 
 variable "vm_ip" {
   description = "Ip used for the vSpgere virtual machine"
+  default = "172.16.20.113"
 }
 
 variable "vm_netmask" {
   description = "Netmask used for the vSphere virtual machine (example: 24)"
+  default = "24"
 }
 
 variable "vm_gateway" {
   description = "Gateway for the vSphere virtual machine"
+  default = "172.16.20.1"
 }
 
 variable "vm_dns" {
   description = "DNS for the vSphere virtual machine"
+  default = "8.8.8.8"
 }
 
 variable "vm_domain" {
@@ -70,5 +79,6 @@ variable "vm_domain" {
 
 variable "vm_name" {
   description = "The name of the vSphere virtual machines and the hostname of the machine"
+  default = "terraform_test"
 }
 
