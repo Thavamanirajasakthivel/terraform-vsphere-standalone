@@ -45,7 +45,7 @@ variable "vm_network" {
 
 variable "vm_template" {
   description = "Template used to create the vSphere virtual machines"
-  default = "eshopterraform"
+  default = "eshopterraform1"
 }
 
 variable "vm_linked_clone" {
@@ -79,6 +79,6 @@ variable "vm_domain" {
 
 variable "vm_name" {
   description = "The name of the vSphere virtual machines and the hostname of the machine"
-  default = "terraform_test"
+  default = "terraform_test1"
 }
 

@@ -64,6 +64,24 @@ resource "vsphere_virtual_machine" "standalone" {
 
   clone {
     template_uuid = "${data.vsphere_virtual_machine.template.id}"
+    linked_clone  = "${var.vm_linked_clone}"
+
+    customize {
+      timeout = "20"
+
+      linux_options {
+        host_name = "custzero"
+        domain    = "${var.vm_domain}"
+      }
+
+      network_interface {
+        ipv4_address = "${var.vm_ip}"
+        ipv4_netmask = "${var.vm_netmask}"
+      }
+
+      ipv4_gateway    = "${var.vm_gateway}"
+      dns_server_list = ["${var.vm_dns}"]
+    }
     
   }
 }
